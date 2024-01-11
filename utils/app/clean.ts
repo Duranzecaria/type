@@ -57,3 +57,9 @@ export const cleanConversationHistory = (history: Conversation[]) => {
 
   return updatedHistory;
 };
+if (!updatedConversation.folderId) {
+    updatedConversation = {
+      ...updatedConversation,
+      folderId: updatedConversation.folderId || 0
+    };
+  }
